@@ -19,41 +19,30 @@
 
         th,
         td {
-            padding: 8px;
+            padding: 10px;
         }
 
         thead {
-            text-align: center;
+            text-align: column;
         }
     </style>
 </head>
 
 <body style="display: flex; align-items: center ; justify-content: center; flex-direction: column">
-    <h1>Lista de alunos</h1>
+    <h1>Lista de Grupos</h1>
     <table>
         <thead>
             <th>id</th>
-            <th>nome</th>
-            <th>Email</th>
-            <th>grupoId</th>
-            <th>Opcoes</th>
+            <th>estandeId</th>
         </thead>
         <tbody>
-            <% for(var i=0; i < alunos.length; i++) { %>
+            <% for(var i=0; i < grupos.length; i++) { %>
                 <tr><td>
-                        <%= alunos[i].id %>
+                        <%= grupos[i].id %>
                     </td>
                     <td>
-                        <%= alunos[i].nome %>
+                        <%= grupos[i].estandeId %>
                     </td>
-                    <td>
-                        <%= alunos[i].email %>
-                    </td>
-                    <td>
-                        <%= alunos[i].grupoId %>
-                    </td>
-                  
-
                     <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-user-plus"></i></button>
                         <button class="btn"><i class="fa fa-user-times"></i></button>
                         <button class="btn"><i class="fa fa-user-secret"></i></button>

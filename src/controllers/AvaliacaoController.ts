@@ -6,12 +6,12 @@ class AvaliacaoController {
     }
         async listAvaliacao(req: Request, res: Response){
         const avaliacao = await AvaliacaoService.listAvaliacoes();
-        res.render('avaliações', {avaliacao:avaliacao }) 
+        res.render('avaliacao', {avaliacao:avaliacao }) 
       }
 
       async createAvaliacao(req: Request, res: Response){
         const dados: Prisma.AvaliacaoCreateInput = req.body;
-        if( dados.id !== "" &&  dados.notaApresentacao !== 10  && dados.notaIdeia !== 10 && dados.notaProjeto !== 10){
+        if( dados.id !== "" &&  dados.notaApresentacao !== 0  && dados.notaIdeia !== 0 && dados.notaProjeto !== 0){
             const newAvaliacao = await AvaliacaoService.createAvalicao(dados)
             res.status(200).json({
                 status: 'ok',
