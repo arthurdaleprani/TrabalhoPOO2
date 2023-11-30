@@ -14,10 +14,10 @@ async function main() {
       nome: 'Abrantes'
     }
   })
-    */
- 
+    
+ */
 
-    /*const Grupo = await prisma.grupo.create({
+    /* const Grupo = await prisma.grupo.create({
       data: {
         id:'15',
         estandeId: '15'
@@ -30,11 +30,11 @@ async function main() {
         id:'1',
         estandeId: '1'
       }
-    }); */
-   
+    }); 
+   */
 
 
-    
+   /* 
  const estande = await prisma.estande.create({
       data: {
         id: '15',
@@ -42,15 +42,15 @@ async function main() {
         
       }
     });
+    */
     
-    
-    /*const estande2 = await prisma.estande.create({
+   /* const estande2 = await prisma.estande.create({
       data: {
         id: '2',
         grupoId:'2'
       }
-    });
-*/
+    }); */
+
 
 const aluno = await prisma.aluno.create({
   data: {
@@ -79,7 +79,7 @@ const aluno2 = await prisma.aluno.create({
       notaApresentacao: 10,
       notaIdeia: 10,
       notaProjeto: 10,
-      alunoId:"10"
+      alunoId:'10'
     }
   });
   
